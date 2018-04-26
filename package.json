@@ -1,11 +1,10 @@
 {
   "name": "searchchain",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Search & Replace using promise chain on streams",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "npm run mocha:istanbul",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./coverage",
     "test:all": "cross-env mocha --recursive \"./test/*.test.js\" --timeout 60000",
     "mocha:istanbul": "nyc --reporter=lcov npm run test:all && nyc report --report=lcov > coverage.lcov",
     "posttest2": "npm run lint && nsp check",
@@ -15,8 +14,6 @@
   "author": "pbhadauria2000",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
@@ -24,7 +21,6 @@
     "mocha": "^5.1.1",
     "mocha-lcov-reporter": "^1.3.0",
     "nsp": "^3.2.1",
-    "nyc": "^11.7.1",
-    "rimraf": "^2.6.2"
+    "nyc": "^11.7.1"
   }
 }
