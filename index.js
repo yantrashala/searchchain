@@ -41,7 +41,7 @@ function processToken(token, replaceFn, previousPromise) {
   if (token.static) {
     return Promise.all([Promise.resolve(token.value), previousPromise]);
   } else {
-    return Promise.all([replaceFn(token.name, token.value), previousPromise]);
+    return Promise.all([replaceFn(token.value), previousPromise]);
   }
 }
 

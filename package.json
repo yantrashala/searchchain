@@ -1,6 +1,6 @@
 {
   "name": "searchchain",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Search & Replace using promise chain on streams",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "posttest2": "npm run lint && nsp check",
     "lint": "eslint ."
   },
-  "dependencies": {},
+  "dependencies": {
+    "htmlclean": "^3.0.8",
+    "node-fetch": "^2.1.2"
+  },
   "author": "pbhadauria2000",
   "license": "MIT",
   "devDependencies": {
